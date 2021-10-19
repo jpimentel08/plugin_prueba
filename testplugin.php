@@ -1,5 +1,4 @@
 <?php 
-
 /**
  * Plugin Name:       session_plugin
  * Plugin URI:        https://example.com/
@@ -45,19 +44,8 @@
  register_activation_hook(__FILE__,'Activar');
  register_deactivation_hook(__FILE__,'Desactivar');
 
-
  add_Action('admin_menu','CrearMenu');
  add_action( 'wp_enqueue_scripts', 'Estilos' );
-
-//  function Estilos(){
-
-    
-//     wp_enqueue_style( 'style-css', plugins_url( '../testplugin/admin/css/style.css' , __FILE__ ) );
-//     wp_enqueue_style( 'bootstrap-css', plugins_url( '../testplugin/admin/bootstrap/css/bootstrap.min.css' , __FILE__ ) );
-//     wp_enqueue_script( 'bootstrap-js', plugins_url( '../testplugin/admin/bootstrap/js/bootstrap.min.js' , __FILE__ ) );
-    
-//  }
-
 
 
  function CrearMenu(){

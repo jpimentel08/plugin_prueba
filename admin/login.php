@@ -1,4 +1,3 @@
-
 <?php
     $style2= plugin_dir_url(__FILE__).'css/all.css';
     $style= plugin_dir_url(__FILE__).'css/style.css';
@@ -34,8 +33,6 @@ $datos = [
 
 $resultado = $wpdb->insert($tabla,$datos);
 
-   
-
  //inicio sesion
  if(isset($_POST['btnLogin'])){
     $userLogin = $_POST['userLogin'];
@@ -49,21 +46,13 @@ $resultado = $wpdb->insert($tabla,$datos);
         
         foreach ( $results as $page ){
             $error = '<span style = "color:red;"> Bienvenido</span>';
-            //echo $error;
         }
     }else{
-            //$error = '<span style = "color:red;"> Usuario no existe</span>';
-            
             $error = '
             <div class="alertsMessage">
                 <div class="alert alert-danger" role="alert">Usuario no existe</div>
             </div>
           ';
-            //echo $error;
-
-
-            
-            
     }
     echo $error;
 } 
@@ -79,7 +68,6 @@ if(isset($_POST['btnguardarforgot'])){
     if ($resultado_forgot == 1) {
 
     //datos para el correo
-
         foreach ( $results_forgot as $page ){
 
             $to = $email_forgot;
@@ -101,7 +89,6 @@ if(isset($_POST['btnguardarforgot'])){
     }
 echo $error;
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -115,7 +102,6 @@ echo $error;
 		Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design"
     />
     
-    <!-- /meta tags -->
     <!-- custom style sheet -->
     <link href="<?php echo $style ?>" rel="stylesheet" type="text/css" />
     <!-- /custom style sheet -->
@@ -124,7 +110,6 @@ echo $error;
     <!-- /fontawesome css -->
     <!-- bootstrap css -->
     <link href="<?php echo $style_bootstrap ?>" rel="stylesheet" />
-    <!-- /bootstrap css -->
     <!-- google fonts-->
     <link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
@@ -161,8 +146,6 @@ echo $error;
             </form>
             <p class=" w3l-register-p">No tienes cuenta?<a id="btnnuevo" href="#" class="register"> Registrarse</a></p>
         </div>
-
-        
         <footer>
             <p class="copyright-agileinfo"> &copy; 2021 Plugin Login. All Rights Reserved | Design by <a href="https://hispanossoluciones.com">Hispanos Soluciones</a></p>
         </footer>
@@ -178,7 +161,6 @@ echo $error;
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Registrarse</h5>
             </div>
-            
             <form method="post" >
                 <div class="modal-body">    
                     <div class="container">
@@ -266,6 +248,4 @@ echo $error;
     </div>
 </div>
 </div>
-
-
 </html>
